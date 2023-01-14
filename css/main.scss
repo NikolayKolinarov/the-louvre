@@ -1,0 +1,23 @@
+// main.scss
+// Option A: Include all of Bootstrap
+
+$primary: #212124;
+$secondary: #c51f1f;
+$light: #F5F7F8;
+$dark: #212124;
+$link-color: $light;
+$link-decoration: none;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "light":      $light,
+  "dark":       $dark
+);
+
+html {
+  scroll-behavior: smooth;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+

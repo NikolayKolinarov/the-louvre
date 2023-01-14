@@ -1,0 +1,30 @@
+.nav-link {
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+.nav-link:hover {
+  text-decoration: overline;
+}
+.contactUs {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+}
+.modal {
+  margin-top: 100px;
+}
+.modal .modal-dialog .modal-content {
+  height: 300px;
+}
+.modal .modal-dialog .modal-content .modal-header .modal-title {
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+.modal .modal-dialog .modal-content .modal-body p {
+  font-family: "Inconsolata", monospace;
+}
+
+@media only screen and (max-width: 992px) {
+  .nav.navbar-nav.navbar-right li a {
+    color: white;
+    text-decoration: none;
+  }
+}
