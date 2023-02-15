@@ -7,7 +7,6 @@
     rel="stylesheet"
     href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
   />
-    <meta http-equiv="refresh" content="0; URL=http://localhost/18125/theLouvre/register/signIn.php" />
   <link rel="stylesheet" href="/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
