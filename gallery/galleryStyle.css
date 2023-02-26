@@ -49,6 +49,9 @@ body {
 .container {
   margin-top: 50px;
 }
+.filter {
+  margin-bottom: 50px;
+}
 
 @media only screen and (max-width: 992px) {
   nav {

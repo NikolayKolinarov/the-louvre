@@ -71,6 +71,19 @@
       </section>
       
       <div class="container">
+        <div class="filter">
+        <form method="get">
+          <label for="category">Filter by category:</label>
+          <select name="category" id="category">
+            <option value="">All</option>
+            <option value="Nature">Nature</option>
+            <option value="People">People</option>
+            <option value="Animals">Animals</option>
+            <option value="Architecture">Architecture</option>
+          </select>
+          <button type="submit">Filter</button>
+        </form>
+        </div>
         <div class="row">
           <?php
           $servername = "localhost";
