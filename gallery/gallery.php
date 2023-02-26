@@ -52,6 +52,12 @@
               <li class="nav-item">
                 <a href="../contacts/contacts.php" class="nav-link active"><b>CONTACTS</b></a>
               </li>
+              <li>
+                <a href="../register/logIn.php" class="nav-link active contacts"><b>LOGIN</b></a>
+              </li>
+              <li>
+                <a href="../register/signIn.php" class="nav-link active contacts"><b>SIGNIN</b></a>
+              </li>
             </ul>
           </div>
         </div>
@@ -73,16 +79,16 @@
           $dbname = "thelouvre";
 
           $conn = new mysqli($servername, $username, $password, $dbname);
-          $sql = "SELECT * FROM first_floor";
+          $sql = "SELECT * FROM exhibits";
           $result = $conn->query($sql);
 
           if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
               echo '<div class="col-md-4">
                       <div class="thumbnail">
-                        <img src="' . $row["IMAGE"] . '" alt="' . $row["NAME"] . ' " style="width:100%; height:250px">
+                        <img src="' . $row["FilePath"] . '" alt="' . $row["Name"] . ' " style="width:100%; height:250px">
                           <form method="get" action="dynamicwebpage.php" class="mx-auto">
-                            <h2 class="card-text text-center my-2"><button class="buton border-0 bg-transparent text-white" type="submit" name="id" value="'. $row["ID"] .'" class="nav-link text-dark"</button>' . $row["NAME"] . '</h2>
+                            <h2 class="card-text text-center my-2"><button class="buton border-0 bg-transparent text-white" type="submit" name="Id" value="'. $row["Id"] .'" class="nav-link text-dark"</button>' . $row["Name"] . '</h2>
                           </form>
                       </div>
                     </div>';

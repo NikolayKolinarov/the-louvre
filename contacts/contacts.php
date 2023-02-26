@@ -50,6 +50,12 @@
               <li>
                 <a href="../gallery/gallery.php" class="nav-link active gallery"><b>GALLERY</b></a>
               </li>
+              <li>
+                <a href="../register/logIn.php" class="nav-link active contacts"><b>LOGIN</b></a>
+              </li>
+              <li>
+                <a href="../register/signIn.php" class="nav-link active contacts"><b>SIGNIN</b></a>
+              </li>
             </ul>
           </div>
         </div>

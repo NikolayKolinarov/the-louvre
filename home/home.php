@@ -44,6 +44,12 @@
               <li>
                 <a href="../adminPanel/admin.php" class="nav-link active contacts"><b>ADMIN</b></a>
               </li>
+              <li>
+                <a href="../register/logIn.php" class="nav-link active contacts"><b>LOGIN</b></a>
+              </li>
+              <li>
+                <a href="../register/signIn.php" class="nav-link active contacts"><b>SIGNIN</b></a>
+              </li>
             </ul>
           </div>
         </div>

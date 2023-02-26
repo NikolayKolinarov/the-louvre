@@ -35,7 +35,7 @@
            
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "INSERT INTO users (name,`pass`,`email`) VALUES (?,?,?)";
+            $sql = "INSERT INTO user (name,`pass`,`email`) VALUES (?,?,?)";
 
             $stmt= $conn->prepare($sql);
             $stmt->execute([$name, $password, $email]);

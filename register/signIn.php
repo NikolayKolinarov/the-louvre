@@ -73,7 +73,7 @@
                     class="form-control"
                     id="text"
                     name="password"
-                    value="<?= @$password ?>"
+                    value="<?= @$pass ?>"
                   />
                   <label for="text">Password</label>
                 </div>
