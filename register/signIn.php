@@ -26,17 +26,6 @@
     </style>
   </head>
   <body>
-    <?php
-    //unset($_SESSION["registerErrors"]);
-    if(isset($_SESSION["registerErrors"])){
-      //var_dump($_SESSION["registerErrors"]);
-      for($i = 0; $i < count($_SESSION["registerErrors"]); $i++){
-        $currentError = $_SESSION["registerErrors"][$i];
-        echo "<p>" . $currentError . "</p>";
-      }
-    }
-    unset($_SESSION["registerErrors"]);  
-    ?>
     <form method="get" action="signinProcess.php">
       <div class="container">
         <div class="row">
@@ -86,6 +75,15 @@
                     value="Sign in"
                   />
                 </div>
+                <?php
+                  if(isset($_SESSION["registerErrors"])){
+                    for($i = 0; $i < count($_SESSION["registerErrors"]); $i++){
+                      $currentError = $_SESSION["registerErrors"][$i];
+                      echo "<p>" . $currentError . "</p>";
+                    }
+                  }
+                  unset($_SESSION["registerErrors"]);  
+                ?>
               </div>
             </div>
           </div>

@@ -1,4 +1,13 @@
-<?php session_start(); ?>
+<?php 
+session_start(); 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "thelouvre";
+$drawingId = $_GET["Id"];
+$drawingName = $_GET["drawingName"];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,35 +27,13 @@
     />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="galleryStyle.css?<?php echo time();?>">
-    <title><?php echo $_SESSION["Name"];?></title>
+    <title><?php echo $drawingName; ?></title>
 </head>
 <body>
     <main>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top navbar-custom shadow" aria-label="Fifth navbar example">
-        <div class="container-fluid">
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon navbar-dark bg-dark"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarsExample05">
-            <ul class="nav navbar-nav navbar-right ml-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a href="../home/home.php" class="nav-link active"><b>HOME</b></a>
-              </li>
-              <li class="nav-item">
-                <a href="../contacts/contacts.php" class="nav-link active"><b>CONTACTS</b></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <?php include('../navBar/navDinamicpage.php'); ?>
 
       <?php
-      $servername = "localhost";
-      $username = "root";
-      $password = "";
-      $dbname = "thelouvre";
-      $drawingId = $_GET["Id"];
-
       $conn = new mysqli($servername, $username, $password, $dbname);
       $sql = "SELECT * FROM exhibits WHERE Id=$drawingId";
       $result = $conn->query($sql);
