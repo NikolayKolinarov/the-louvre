@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,18 +30,7 @@
     </style>
   </head>
   <body>
-    <?php
-    //unset($_SESSION["registerErrors"]);
-    if(isset($_SESSION["registerErrors"])){
-      //var_dump($_SESSION["registerErrors"]);
-      for($i = 0; $i < count($_SESSION["registerErrors"]); $i++){
-        $currentError = $_SESSION["registerErrors"][$i];
-        echo "<p>" . $currentError . "</p>";
-      }
-    }
-    unset($_SESSION["registerErrors"]);  
-    ?>
-    <form method="get" action="loginProcess.php">
+    <form method="get" action="registerProcess.php">
       <div class="container">
         <div class="row">
           <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
@@ -79,6 +69,14 @@
                     value="Sign in"
                   />
                 </div>
+                <div class="form-floating mt-3">
+                <?php
+                    if (isset($_SESSION["loginError"])) {
+                      echo "<p style='color:red'> Invalid input! </p>";
+                    }   
+                    unset($_SESSION["loginError"]);      
+                ?>
+              </div>
               </div>
             </div>
           </div>

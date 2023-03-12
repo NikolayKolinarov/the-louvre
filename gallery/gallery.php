@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,46 +23,7 @@
   <body>
     <main>
       <!-- Nav Bar -->
-      <nav
-        class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top navbar-custom shadow"
-        aria-label="Fifth navbar example"
-      >
-        <div class="container-fluid">
-         <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarsExample05"
-            aria-controls="navbarsExample05"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon navbar-dark bg-dark"></span>
-          </button>
-
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarsExample05"
-          >
-            <ul class="nav navbar-nav navbar-right ml-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a href="../home/home.php" class="nav-link active"
-                  ><b>HOME</b></a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="../contacts/contacts.php" class="nav-link active"><b>CONTACTS</b></a>
-              </li>
-              <li>
-                <a href="../register/logIn.php" class="nav-link active contacts"><b>LOGIN</b></a>
-              </li>
-              <li>
-                <a href="../register/signIn.php" class="nav-link active contacts"><b>SIGNIN</b></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <?php include('../navBar/navGallery.php'); ?>
       <!-- Gallery -->
       <section class="jumbotron text-center">
         <div class="container">
@@ -72,14 +34,12 @@
       
       <div class="container">
         <div class="filter">
-        <form method="get">
+        <form method="get" action="filter.php">
           <label for="category">Filter by category:</label>
           <select name="category" id="category">
-            <option value="">All</option>
-            <option value="Nature">Nature</option>
-            <option value="People">People</option>
-            <option value="Animals">Animals</option>
-            <option value="Architecture">Architecture</option>
+            <option selected disabled>Choose category</option>
+            <option value="Portrait" <?php if (isset($_SESSION['selectedCategory']) && $_SESSION['selectedCategory'] == 'Portrait') { echo 'selected';} unset($_SESSION['selectedCategory']);?>>Portrait</option>
+            <option value="Nature" <?php if (isset($_SESSION['selectedCategory']) && $_SESSION['selectedCategory'] == 'Nature') { echo 'selected';} unset($_SESSION['selectedCategory']);?>>Nature</option>
           </select>
           <button type="submit">Filter</button>
         </form>
@@ -90,9 +50,21 @@
           $username = "root";
           $password = "";
           $dbname = "thelouvre";
+          $sql = "";
 
           $conn = new mysqli($servername, $username, $password, $dbname);
-          $sql = "SELECT * FROM exhibits";
+
+          if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+          }
+          
+          if (isset($_SESSION["sqlFilter"])) {
+            $sql = $_SESSION["sqlFilter"];
+            unset($_SESSION["sqlFilter"]);          
+          } else {
+            $sql = "SELECT * FROM exhibits ORDER BY Category";
+          } 
+
           $result = $conn->query($sql);
 
           if ($result->num_rows > 0) {
@@ -101,6 +73,7 @@
                       <div class="thumbnail">
                         <img src="' . $row["FilePath"] . '" alt="' . $row["Name"] . ' " style="width:100%; height:250px">
                           <form method="get" action="dynamicwebpage.php" class="mx-auto">
+                            <input style="display: none" name="drawingName" value="'. $row["Name"] .'">
                             <h2 class="card-text text-center my-2"><button class="buton border-0 bg-transparent text-white" type="submit" name="Id" value="'. $row["Id"] .'" class="nav-link text-dark"</button>' . $row["Name"] . '</h2>
                           </form>
                       </div>

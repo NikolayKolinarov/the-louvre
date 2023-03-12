@@ -35,11 +35,11 @@
            
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "INSERT INTO user (name,`pass`,`email`) VALUES (?,?,?)";
+            $sql = "INSERT INTO user (name,`pass`,`email`, `userType`) VALUES (?,?,?,?)";
 
             $stmt= $conn->prepare($sql);
-            $stmt->execute([$name, $password, $email]);
-            header("Location: ../home/home.php");
+            $stmt->execute([$name, $password, $email, 'user']);
+            header("Location: register.php");
             die();  
         } catch(PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
