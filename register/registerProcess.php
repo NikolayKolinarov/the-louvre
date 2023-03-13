@@ -50,5 +50,5 @@
 
     unset($_SESSION["loginError"]);
     $_SESSION["loginError"] = "loginError";
-    header("Location: logIn.php");
+    header("Location: register.php");
 ?>
