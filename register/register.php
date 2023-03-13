@@ -36,17 +36,18 @@
           <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card border-0 shadow rounded-3 my-5">
               <div class="card-body p-4 p-sm-5">
+                <a href="../home/home.php" class="btn btn-primary btn-login text-uppercase fw-bold"></a>
                 <h5 class="card-title text-center mb-5 fw-light fs-5">
                   Log In
                 </h5>
 
                 <div class="form-floating mb-3">
                   <input
-                    type="text"
-                    class="form-control"
-                    id="text"
-                    name="email"
-                    value="<?= @$email ?>"
+                  type="text"
+                  class="form-control"
+                  id="text"
+                  name="email"
+                  value="<?= @$email ?>"
                   />
                   <label for="text">Email address</label>
                 </div>
@@ -70,13 +71,13 @@
                   />
                 </div>
                 <div class="form-floating mt-3">
-                <?php
-                    if (isset($_SESSION["loginError"])) {
-                      echo "<p style='color:red'> Invalid input! </p>";
-                    }   
-                    unset($_SESSION["loginError"]);      
-                ?>
-              </div>
+                  <?php
+                      if (isset($_SESSION["loginError"])) {
+                        echo "<p style='color:red'> Invalid input! </p>";
+                      }   
+                      unset($_SESSION["loginError"]);      
+                  ?>
+                </div>
               </div>
             </div>
           </div>
