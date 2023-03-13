@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,44 +23,7 @@
   <body class="bg-dark text-white">
     <main>
       <!-- Nav Bar -->
-      <nav
-        class="navbar navbar-expand-lg navbar-dark bg- fixed-top navbar-custom shadow"
-        aria-label="Fifth navbar example"
-      >
-        <div class="container-fluid">
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarsExample05"
-            aria-controls="navbarsExample05"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon navbar-dark bg-dark"></span>
-          </button>
-
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarsExample05"
-          >
-            <ul class="nav navbar-nav navbar-right ml-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a href="../home/home.php" class="nav-link active about" id="aboutId"><b>HOME</b></a>
-              </li>
-              <li>
-                <a href="../gallery/gallery.php" class="nav-link active gallery"><b>GALLERY</b></a>
-              </li>
-              <li>
-                <a href="../register/logIn.php" class="nav-link active contacts"><b>LOGIN</b></a>
-              </li>
-              <li>
-                <a href="../register/signIn.php" class="nav-link active contacts"><b>SIGNIN</b></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <?php include('../navBar/navCont.php'); ?>
       <!-- Contact Us-->
       <div
         class="modal modal-sheet position-static d-block bg-dark py-5"

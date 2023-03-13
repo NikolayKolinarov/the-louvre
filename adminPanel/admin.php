@@ -24,13 +24,13 @@
 
 	if ( $delete_id ) {
 		
-		$query = $connection->prepare('DELETE FROM users WHERE userId = ?');
+		$query = $connection->prepare('DELETE FROM user WHERE userId = ?');
 		$query->execute( [ $delete_id ] );
 	}
 
 
 
-	$query = $connection->prepare('SELECT * FROM  users ');
+	$query = $connection->prepare('SELECT * FROM  user ');
 	$query->execute();
 	$rows = $query->fetchAll();
 

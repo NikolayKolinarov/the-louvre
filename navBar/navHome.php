@@ -25,8 +25,8 @@
               if(isset($_SESSION["loggedUser"]) && isset($_SESSION["loggedUserRole"])) {
                 if ($_SESSION["loggedUserRole"] == "admin") {
                   echo '
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">'. $_SESSION['loggedUser'] .'</button>
+                  <div class="btn-group dropdown">
+                    <button type="button" class="btn btn-transparent dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">'. $_SESSION['loggedUser'] .'</button>
                     <ul class="dropdown-menu dropdown-menu-end">
                       <li><a class="dropdown-item" href="viewProfile.php">View Profile</a></li>
                       <li><a class="dropdown-item" href="adminPanel.php">View Users</a></li>
