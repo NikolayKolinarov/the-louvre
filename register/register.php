@@ -1,4 +1,7 @@
-<?php session_start();?>
+<?php 
+session_start();
+$last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/home.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,7 +39,7 @@
           <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card border-0 shadow rounded-3 my-5">
               <div class="card-body p-4 p-sm-5">
-                <a href="../home/home.php" class="btn btn-primary btn-login text-uppercase fw-bold"></a>
+                <a href="<?= $last_page ?>" class="btn btn-primary btn-login text-uppercase fw-bold"></a>
                 <h5 class="card-title text-center mb-5 fw-light fs-5">
                   Log In
                 </h5>

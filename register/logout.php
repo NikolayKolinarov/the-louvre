@@ -2,5 +2,6 @@
     session_start();
     unset($_SESSION['loggedUser']);
     unset($_SESSION['loggedUserRole']);
-    header("Location: ../home/home.php"); 
+    $previousPage = $_SERVER['HTTP_REFERER'];
+    header("Location: $previousPage"); 
 ?>

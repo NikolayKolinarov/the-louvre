@@ -1,23 +1,15 @@
 <?php
     session_start();
    
-
-    echo "<pre>";
-    var_dump($_GET);
-    echo "<pre>";
-
     $name = $_GET["name"];
     $email = $_GET["email"];
     $password = $_GET["password"];
    
-
- 
     $registerErrors = array();
 
     if(strlen($password) < 5){
-        $registerErrors[] = "Invalid password lenght !";
+        $registerErrors[] = "Invalid password length!";
     }
-
 
     if(count($registerErrors) != 0){
         unset($_SESSION["registerErrors"]);
@@ -25,20 +17,19 @@
         header("Location: signIn.php");
         die();
     }else{
-       
         $servername = "localhost";
         $dbusername = "root";
         $dbPassword = "";
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=thelouvre", $dbusername, $dbPassword);
-           
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "INSERT INTO user (name,`pass`,`email`, `userType`) VALUES (?,?,?,?)";
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
+            $sql = "INSERT INTO user (name, `pass`, `email`, `userType`) VALUES (?,?,?,?)";
             $stmt= $conn->prepare($sql);
-            $stmt->execute([$name, $password, $email, 'user']);
+            $stmt->execute([$name, $hashed_password, $email, 'user']);
             header("Location: register.php");
             die();  
         } catch(PDOException $e) {
