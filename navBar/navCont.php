@@ -33,8 +33,8 @@
                   <div class="btn-group">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">'. $_SESSION['loggedUser'] .'</button>
                     <ul class="dropdown-menu dropdown-menu-end">
-                      <li><a class="dropdown-item" href="viewProfile.php">View Profile</a></li>
-                      <li><a class="dropdown-item" href="adminPanel.php">View Users</a></li>
+                      <li><a class="dropdown-item" href="../profile/userProfile.php">View Profile</a></li>
+                      <li><a class="dropdown-item" href="../adminPanel/admin.php">View Users</a></li>
                       <li><a class="dropdown-item" href="addUser.php">Add User</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="../register/logout.php">Log Out</a></li>
@@ -45,7 +45,7 @@
                   <div class="btn-group">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">'. $_SESSION['loggedUser'] .'</button>
                     <ul class="dropdown-menu dropdown-menu-end">
-                      <li><a class="dropdown-item" href="viewProfile.php">View Profile</a></li>
+                      <li><a class="dropdown-item" href="../profile/userProfile.php">View Profile</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="../register/logout.php">Log Out</a></li>
                     </ul>
