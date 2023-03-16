@@ -31,13 +31,13 @@ $last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/h
       <div class="col-md-12 col-xl-4">
         <div class="card" style="border-radius: 15px;">
           <div class="card-body text-center">
-            <a href="<?= $last_page ?>" class="btn btn-primary btn-login text-uppercase fw-bold float-start">Go Back</a>
+            <a href="<?= $last_page ?>" class="btn btn-black text-uppercase fw-bold float-start">Go Back</a><br><br>
             <div class="mt-3 mb-4">
               <img src="userPicture.png"
                 class="rounded-circle img-fluid" style="width: 100px;" />
             </div>
-            <p class="text-muted mb-4"><?php echo '@'. $username.'' ?> <span class="mx-2">
-            <a href=""></a>
+            <p class="text-muted mb-4"><?php echo '@'. $username.'' ?> <span class="mx-2"><br><br>
+            <a  class="btn btn-black text-uppercase fw-bold float-center" href="../register/logout.php">Log Out</a>
           </div>
         </div>
       </div>

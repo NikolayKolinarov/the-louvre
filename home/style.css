@@ -11,6 +11,13 @@
 .nav-link:hover {
   text-decoration: overline;
 }
+.dropdown-link:hover{
+  text-decoration: none;
+}
+.dropdown-item:active {
+  background-color: #212124;
+  color: white;
+}
 p.lead {
   font-family: "Inconsolata", monospace;
 }

@@ -18,8 +18,8 @@
         <?php 
           if(isset($_SESSION["loggedUser"]) && isset($_SESSION["loggedUserRole"])) {
             if ($_SESSION["loggedUserRole"] == "admin") {
-              echo '<div class="btn-group dropdown" id="#navbarsExample05">
-              <button type="button" class="btn btn-transparent dropdown-toggle dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">'. $_SESSION['loggedUser'] .'</button>
+              echo '<div class="btn-group dropdown nav-link active">
+              <button type="button" class="btn dropdown-link dropdown-toggle active btn-transparent pt-0 pb-0" data-bs-toggle="dropdown" aria-expanded="false">'. $_SESSION['loggedUser'] .'</button>
               <ul class="dropdown-menu dropdown-menu-end">
               <li><a class="dropdown-item" href="../profile/userProfile.php">View Profile</a></li>
               <li><a class="dropdown-item" href="../adminPanel/admin.php">View Users</a></li>
@@ -28,8 +28,8 @@
               <li><a class="dropdown-item" href="../register/logout.php">Log Out</a></li>
               </ul></div>';
             } else {
-              echo '<div class="btn-group">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">'. $_SESSION['loggedUser'] .'</button>
+              echo '<div class="btn-group dropdown nav-link active">
+              <button type="button" class="btn dropdown-link dropdown-toggle active btn-transparent pt-0 pb-0" data-bs-toggle="dropdown" aria-expanded="false">'. $_SESSION['loggedUser'] .'</button>
               <ul class="dropdown-menu dropdown-menu-end">
               <li><a class="dropdown-item" href="../profile/userProfile.php">View Profile</a></li>
               <li><hr class="dropdown-divider"></li>
