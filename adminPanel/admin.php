@@ -1,3 +1,7 @@
+<?php 
+session_start();
+$last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/home.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +20,7 @@
 	<title>Users</title>
 </head>
 <body>
-	<a href="../home/home.php" class="return-btn btn text-uppercase fw-bold m-3"></a>
+	<a href="<?= $last_page ?>" class="return-btn btn text-uppercase fw-bold m-3"></a>
 	<?php
   
 
