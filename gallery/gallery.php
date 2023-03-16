@@ -35,16 +35,17 @@ $_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
         </div>
       </section>
       
-      <div class="container">
+      <div id="test" class="container">
         <div class="filter">
-        <form method="get" action="filter.php">
-          <label for="category">Filter by category:</label>
-          <select name="category" id="category">
-            <option selected disabled>Choose category</option>
-            <option value="Portrait" <?php if (isset($_SESSION['selectedCategory']) && $_SESSION['selectedCategory'] == 'Portrait') { echo 'selected';} unset($_SESSION['selectedCategory']);?>>Portrait</option>
-            <option value="Nature" <?php if (isset($_SESSION['selectedCategory']) && $_SESSION['selectedCategory'] == 'Nature') { echo 'selected';} unset($_SESSION['selectedCategory']);?>>Nature</option>
-          </select>
-          <button type="submit">Filter</button>
+        <form method="post">
+          <div class="form-group">
+            <label for="filter" class="text-white">Filter by category:</label>
+            <select class="form-control" id="filter" name="filter" onchange="this.form.submit()">
+              <option value="All" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'All') echo 'selected'; ?>>All</option>
+              <option value="Nature" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'Nature') echo 'selected'; ?>>Nature</option>
+              <option value="Portrait" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'Portrait') echo 'selected'; ?>>Portrait</option>
+            </select>
+          </div>
         </form>
         </div>
         <div class="row">
@@ -55,18 +56,19 @@ $_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
           $dbname = "thelouvre";
           $sql = "";
 
+          // Create connection
           $conn = new mysqli($servername, $username, $password, $dbname);
 
-          if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-          }
-          
-          if (isset($_SESSION["sqlFilter"])) {
-            $sql = $_SESSION["sqlFilter"];
-            unset($_SESSION["sqlFilter"]);          
+          if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $filter = $_POST['filter'];
+            if ($filter == 'All') {
+              $sql = "SELECT * FROM exhibits";
+            } else {
+              $sql = "SELECT * FROM exhibits WHERE Category='$filter'";
+            }
           } else {
-            $sql = "SELECT * FROM exhibits ORDER BY Category";
-          } 
+            $sql = "SELECT * FROM exhibits";
+          }
 
           $result = $conn->query($sql);
 
