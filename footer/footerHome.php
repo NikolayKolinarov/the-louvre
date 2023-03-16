@@ -19,6 +19,6 @@
               }
         ?>
     </ul>
-        <p class="text-center text-white">&copy; 2022 Nikolay Kolibarov</p>
+        <p class="text-center text-white">&copy; 2023 Nikolay Kolibarov</p>
     </footer>
 </div>
