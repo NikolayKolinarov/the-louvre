@@ -19,7 +19,7 @@ $last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/h
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <title>Sign in</title>
+    <title>Log in</title>
     <style>
         form {
             margin-top: 100px;
@@ -30,6 +30,11 @@ $last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/h
         letter-spacing: 0.05rem;
         padding: 0.75rem 1rem;
       }
+      .btn-back{
+        height: 40px;
+        width: 40px;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
@@ -39,7 +44,7 @@ $last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/h
           <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card border-0 shadow rounded-3 my-5">
               <div class="card-body p-4 p-sm-5">
-                <a href="<?= $last_page ?>" class="btn btn-primary btn-login text-uppercase fw-bold"></a>
+                <a href="<?= $last_page ?>" class="btn btn-primary btn-login text-uppercase fw-bold btn-back"><img class="btn-img" src="../images/back_arrow.png" alt="Back Arrow"></a>
                 <h5 class="card-title text-center mb-5 fw-light fs-5">
                   Log In
                 </h5>
