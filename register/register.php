@@ -30,10 +30,18 @@ $last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/h
         letter-spacing: 0.05rem;
         padding: 0.75rem 1rem;
       }
+
       .btn-back{
         height: 40px;
         width: 40px;
-        text-align: center;
+      }
+
+      .btn-img {
+        display: flex;
+        height: 20px;
+        width: 20px;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>

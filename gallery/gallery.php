@@ -23,7 +23,7 @@ $_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
     <link rel="stylesheet" href="galleryStyle.css?<?php echo time();?>">
     <title>Gallery</title>
   </head>
-  <body>
+  <body class="bg-dark">
     <main>
       <!-- Nav Bar -->
       <?php include('../navBar/navGallery.php'); ?>

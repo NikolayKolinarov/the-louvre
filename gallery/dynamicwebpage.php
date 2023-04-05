@@ -10,10 +10,10 @@ $drawingName = $_GET["drawingName"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -42,11 +42,11 @@ $drawingName = $_GET["drawingName"];
         while ($row = $result->fetch_assoc()) {
           $_SESSION["drawingName"] = $row["Name"];
           echo '<div class="col">
-                      <div class="card shadow-sm h-10">
+                      <div class="card shadow-sm h-10 bg-dark">
                         <img class="mx-auto" style="width: 50%; height: 50%; align: center;" src="'. $row["FilePath"] . '">
                         <div class="card-body text-center">
                         <form method="get" action="dynamicwebpage.php" class="mx-auto">
-                          <h2 class="card-text text-center my-2"><button class="buton border-0 bg-black text-white" type="submit" name="Id" value="'. $row["Id"] .'" class="nav-link text-dark"</button>' . $row["Name"] . '</h2>
+                          <h2 class="card-text text-center my-2"><button class="buton border-0 bg-black text-white" type="submit" name="Id" value="'. $row["Id"] .'" class="nav-link text-white"</button>' . $row["Name"] . '</h2>
                         </form>                 
                         </div>
                       </div>
@@ -55,5 +55,7 @@ $drawingName = $_GET["drawingName"];
       }
       ?>
     </main>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
