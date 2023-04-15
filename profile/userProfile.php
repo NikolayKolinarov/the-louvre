@@ -23,8 +23,49 @@ $last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/h
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="userProfile.css">
     <title><?php echo $username; ?></title>
+    <style>
+    #google_translate_element select{
+      background-color: transparent;
+      color: white;
+      margin-top: 13px;
+    }
+  
+    .goog-logo-link{
+      display:none !important;
+    }
+    
+    .goog-te-gadget{
+      color:transparent!important;
+    }
+
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    } 
+  
+    body {
+      top: 0px !important; 
+    }
+    
+    .goog-te-banner-frame{
+      display:none !important;
+    }
+  
+    #goog-gt-tt, .goog-te-balloon-frame{display: none !important;}
+    
+    .goog-text-highlight { background: none !important; box-shadow: none !important;}
+    
+    #google_translate_element span{
+      display:none !important;
+    }
+  
+    .skiptranslate iframe{
+      display: none !important;
+      visibility: hidden !important;
+    }
+  </style>
 </head>
 <body>
+<?php include('../navBar/google.php'); ?>
 <section class="vh-100">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">

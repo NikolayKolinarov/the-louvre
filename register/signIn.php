@@ -24,11 +24,50 @@ $last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/h
       .btn-login {
         font-size: 0.9rem;
         letter-spacing: 0.05rem;
-        padding: 0.75rem 1rem;
+      }
+      
+      #google_translate_element select{
+        background-color: transparent;
+        color: white;
+        margin-top: 13px;
+      }
+  
+      .goog-logo-link{
+        display:none !important;
+      }
+    
+      .goog-te-gadget{
+        color:transparent!important;
+      }
+
+      .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+      } 
+  
+      body {
+        top: 0px !important; 
+      }
+    
+      .goog-te-banner-frame{
+        display:none !important;
+      }
+  
+      #goog-gt-tt, .goog-te-balloon-frame{display: none !important;}
+    
+      .goog-text-highlight { background: none !important; box-shadow: none !important;}
+    
+      #google_translate_element span{
+        display:none !important;
+      }
+  
+      .skiptranslate iframe{
+        display: none !important;
+        visibility: hidden !important;
       }
     </style>
   </head>
   <body>
+  <?php include('../navBar/google.php'); ?>
     <form method="get" action="signinProcess.php">
       <div class="container">
         <div class="row">

@@ -1,3 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #google_translate_element select{
+      background-color: transparent;
+      color: white;
+      margin-top: 13px;
+    }
+  
+    .goog-logo-link{
+      display:none !important;
+    }
+    
+    .goog-te-gadget{
+      color:transparent!important;
+    }
+
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    } 
+  
+    body {
+      top: 0px !important; 
+    }
+    
+    .goog-te-banner-frame{
+      display:none !important;
+    }
+  
+    #goog-gt-tt, .goog-te-balloon-frame{display: none !important;}
+    
+    .goog-text-highlight { background: none !important; box-shadow: none !important;}
+    
+    #google_translate_element span{
+      display:none !important;
+    }
+  
+    .skiptranslate iframe{
+      display: none !important;
+      visibility: hidden !important;
+    }
+  </style>
+</head>
+<body>
 <nav class="navbar navbar-expand-lg navbar-light bg- fixed-top navbar-custom" aria-label="Fifth navbar example">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,6 +63,7 @@
         <li>
           <a href="../contacts/contacts.php" class="nav-link active contacts"><b>CONTACTS</b></a>
         </li>
+        <?php include('google.php'); ?>
         <?php 
           if(isset($_SESSION["loggedUser"]) && isset($_SESSION["loggedUserRole"])) {
             if ($_SESSION["loggedUserRole"] == "admin") {
@@ -48,3 +97,5 @@
     </div>
   </div>
 </nav>
+</body>
+</html>
