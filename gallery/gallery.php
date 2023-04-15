@@ -35,15 +35,15 @@ $_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
         </div>
       </section>
       
-      <div class="container">
+      <div id="test" class="container">
         <div class="filter">
         <form method="post">
           <div class="form-group">
-            <label for="filter" class="text-white">Filter by genre:</label>
+            <label for="filter" class="text-white">Filter by category:</label>
             <select class="form-control" id="filter" name="filter" onchange="this.form.submit()">
               <option value="All" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'All') echo 'selected'; ?>>All</option>
-              <option value="Nature" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'Nature') echo 'selected'; ?>>Action</option>
-              <option value="Portrait" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'Portrait') echo 'selected'; ?>>Horror</option>
+              <option value="Nature" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'Nature') echo 'selected'; ?>>Nature</option>
+              <option value="Portrait" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'Portrait') echo 'selected'; ?>>Portrait</option>
             </select>
           </div>
         </form>
