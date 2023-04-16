@@ -6,7 +6,6 @@ $password = "";
 $dbname = "thelouvre";
 $drawingId = $_GET["Id"];
 $drawingName = $_GET["drawingName"];
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,10 +42,12 @@ $drawingName = $_GET["drawingName"];
           $_SESSION["drawingName"] = $row["Name"];
           echo '<div class="col">
                       <div class="card h-10 bg-dark">
-                        <img class="mx-auto" style="width: 50%; height: 50%; align: center;" src="'. $row["FilePath"] . '">
+                        <img class="mx-auto" style="width: 50%; height: 50%; align: center; margin-top: 100px; border-radius: 10px" src="'. $row["FilePath"] . '">
                         <div class="card-body text-center">
                         <form method="get" action="dynamicwebpage.php" class="mx-auto">
                           <h2 class="card-text text-center my-2"><button class="buton border-0 bg-transparent text-white" type="submit" name="Id" value="'. $row["Id"] .'" class="nav-link text-white"</button>' . $row["Name"] . '</h2>
+                          <p class="d-inline-block me-2">Category: '. $row["Category"] .'</p>
+                          <p class="d-inline-block">Country: '. $row["MadePlace"] .'</p>
                         </form>                 
                         </div>
                       </div>
