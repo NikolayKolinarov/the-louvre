@@ -64,6 +64,20 @@ select.form-control option {
   color: #495057;
 }
 
+.filter select {
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid black;
+  color: white;
+}
+
+select focus {
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid black;
+  color: white;
+}
+
 @media only screen and (max-width: 992px) {
   nav {
     background-color: #212124;
