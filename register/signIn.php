@@ -19,6 +19,7 @@ $last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/h
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link rel="icon" type="image/x-icon" href="../images/favIcon.png">
     <title>Sign in</title>
     <style>
       .btn-login {

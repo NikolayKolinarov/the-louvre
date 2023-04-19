@@ -21,6 +21,7 @@ $_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
     />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="galleryStyle.css?<?php echo time();?>">
+    <link rel="icon" type="image/x-icon" href="../images/favIcon.png">
     <title>Gallery</title>
   </head>
   <body class="bg-dark">
@@ -42,8 +43,9 @@ $_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
             <label for="filter" class="text-white">Filter by category:</label>
             <select class="form-control" id="filter" name="filter" onchange="this.form.submit()">
               <option value="All" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'All') echo 'selected'; ?>>All</option>
-              <option value="Nature" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'Nature') echo 'selected'; ?>>Nature</option>
-              <option value="Portrait" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'Portrait') echo 'selected'; ?>>Portrait</option>
+              <option value="Painting" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'Painting') echo 'selected'; ?>>Painting</option>
+              <option value="Sculpture" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'Sculpture') echo 'selected'; ?>>Sculpture</option>
+              <option value="Structure" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'Structure') echo 'selected'; ?>>Structure</option>
             </select>
           </div>
         </form>
@@ -77,11 +79,11 @@ $_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
             while ($row = $result->fetch_assoc()) {
               echo '<div class="col-md-4">
                       <div class="thumbnail">
-                        <img src="' . $row["FilePath"] . '" alt="' . $row["Name"] . ' " style="width:100%; height:250px">
-                          <form method="get" action="dynamicwebpage.php" class="mx-auto">
-                            <input style="display: none" name="drawingName" value="'. $row["Name"] .'">
-                            <h2 class="card-text text-center my-2"><button class="buton border-0 bg-transparent text-white" type="submit" name="Id" value="'. $row["Id"] .'" class="nav-link text-dark"</button>' . $row["Name"] . '</h2>
-                          </form>
+                        <form method="get" action="dynamicwebpage.php" class="mx-auto">
+                          <img src="' . $row["FilePath"] . '" alt="' . $row["Name"] . ' " style="width:100%; height:250px">
+                          <input style="display: none" name="drawingName" value="'. $row["Name"] .'">
+                          <h2 class="card-text text-center my-2"><button class="buton border-0 bg-transparent text-white" type="submit" name="Id" value="'. $row["Id"] .'" class="nav-link text-dark"</button>' . $row["Name"] . '</h2>
+                        </form>
                       </div>
                     </div>';
             }

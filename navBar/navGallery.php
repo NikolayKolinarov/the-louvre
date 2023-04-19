@@ -62,6 +62,7 @@
           >
             <span class="navbar-toggler-icon navbar-dark bg-dark"></span>
           </button>
+          <a href="../home/home.php"><img src="../images/TheLouvreLogo.avif" alt="Logo" style="width: 70px;height: 35px;"></a>
 
           <div
             class="collapse navbar-collapse justify-content-end"
