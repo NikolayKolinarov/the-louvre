@@ -51,6 +51,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon navbar-dark bg-dark"></span>
     </button>
+    <a href="../home/home.php"><img src="../images/TheLouvreLogo.avif" alt="Logo" style="width: 70px;height: 35px;"></a>
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarsExample05">
       <ul class="nav navbar-nav navbar-right ml-auto mb-2 mb-lg-0">
