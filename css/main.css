@@ -2470,8 +2470,8 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
+  color: #F5F7F8;
+  background-color: #212124;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
@@ -2512,7 +2512,7 @@ textarea.form-control-lg {
 
 .form-select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #212529;
+  text-shadow: 0 0 0 #F5F7F8;
 }
 
 .form-select-sm {
@@ -12090,5 +12090,10 @@ fieldset:disabled .btn {
   .d-print-none {
     display: none !important;
   }
+}
+
+select option {
+  background-color: #212124 !important;
+  color: #d8cfcf !important;
 }
 /*# sourceMappingURL=main.css.map */

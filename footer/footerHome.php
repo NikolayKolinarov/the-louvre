@@ -2,8 +2,9 @@
     <footer class="py-3 my-4">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item"><a href="#" class="footer-link px-2 text-white">Home</a></li>
-        <li class="nav-item"><a href="#about" class="footer-link px-2 text-white">About</a></li>
+        <li class="nav-item"><a href="#about" class="footer-link px-2 text-white">Относно</a></li>
         <li class="nav-item"><a href="../gallery/gallery.php" class="footer-link px-2 text-white">Gallery</a></li>
+        <li class="nav-item"><a href="../cards/cards.php" class="footer-link px-2 text-white">Cards</a></li>
         <li class="nav-item"><a href="../contacts/contacts.php" class="footer-link px-2 text-white">Contacts</a></li>
         <?php 
             if(isset($_SESSION["loggedUser"]) && isset($_SESSION["loggedUserRole"])) {

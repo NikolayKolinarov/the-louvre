@@ -26,7 +26,9 @@
             $password = $currentRow["pass"];
             $userType = $currentRow["userType"];
 
-            if ($logMail == $email && $logPass == $password) {
+            // if ($logMail == $email && $logPass == $password) {
+
+            if(password_verify($logPass, $password)){
                 unset($_SESSION["loginSuccess"]);
                 $_SESSION["loginSuccess"] = "loginSuccess";
 

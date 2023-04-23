@@ -58,6 +58,22 @@ $last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/h
       display: none !important;
       visibility: hidden !important;
     }
+
+    @media (max-width: 992px) {
+    .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .table {
+      font-size: 0.9rem;
+    }
+    .table thead th {
+      font-size: 0.8rem;
+    }
+    .table td, .table th {
+      padding: 0.5rem 0.3rem;
+    }
+  }
   </style>
 </head>
 <body>
@@ -76,11 +92,11 @@ $last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/h
 	$query->execute();
 	$rows = $query->fetchAll();
 ?>
-<div class="container">
+<div class="container table-responsive">
   <table class="table table-striped table-dark table-bordered table-hover">
     <thead>
       <tr>
-        <th>userId</th>
+        <th>user Id</th>
         <th>name</th>
         <th>email</th>
         <th>password</th>

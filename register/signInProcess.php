@@ -29,7 +29,7 @@
 
             $sql = "INSERT INTO user (name, `pass`, `email`, `userType`) VALUES (?,?,?,?)";
             $stmt= $conn->prepare($sql);
-            $stmt->execute([$name, $password, $email, 'user']);
+            $stmt->execute([$name, $hashed_password, $email, 'user']);
             header("Location: register.php");
             die();  
         } catch(PDOException $e) {

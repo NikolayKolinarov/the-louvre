@@ -19,5 +19,10 @@ html {
   scroll-behavior: smooth;
 }
 
+$form-select-color: $light;
+$form-select-bg: $dark;
 @import "../node_modules/bootstrap/scss/bootstrap";
-
+select option {
+  background-color: #212124 !important;
+  color: rgb(216, 207, 207) !important;
+}

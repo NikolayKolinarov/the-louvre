@@ -21,7 +21,18 @@
 .modal .modal-dialog .modal-content .modal-body p {
   font-family: "Inconsolata", monospace;
 }
+#map-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 
+#map {
+  height: 400px;
+  width: 600px;
+}
 @media only screen and (max-width: 992px) {
   .nav.navbar-nav.navbar-right li a {
     color: white;

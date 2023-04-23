@@ -43,6 +43,10 @@
       display: none !important;
       visibility: hidden !important;
     }
+    .dropdown-menu > li > a:hover,
+    .dropdown-menu > li > a:focus {
+      background-color: transparent;
+    }
   </style>
 </head>
 <body>
@@ -50,8 +54,8 @@
         class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top navbar-custom shadow"
         aria-label="Fifth navbar example"
       >
-      <div class="container-fluid">
-        <button
+        <div class="container-fluid">
+         <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -70,46 +74,54 @@
           >
             <ul class="nav navbar-nav navbar-right ml-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a href="../home/home.php" class="nav-link active about" id="aboutId"><b>HOME</b></a>
+                <a href="../home/home.php" class="nav-link active"
+                  ><b>HOME</b></a
+                >
               </li>
-              <li>
-                <a href="../gallery/gallery.php" class="nav-link active gallery"><b>GALLERY</b></a>
+              <li class="nav-item">
+                <a href="../gallery/gallery.php" class="nav-link active"><b>GALLERY</b></a>
+              </li>
+              <li class="nav-item">
+                <a href="../cards/cards.php" class="nav-link active"><b>CARDS</b></a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link active"><b>CONTACTS</b></a>
               </li>
               <?php include('google.php'); ?>
               <?php 
               if(isset($_SESSION["loggedUser"]) && isset($_SESSION["loggedUserRole"])) {
                 if ($_SESSION["loggedUserRole"] == "admin") {
-                  echo '<div class="btn-group dropdown nav-link active">
+                  echo '<div class="btn-group dropdown nav-link active text-decoration-none">
                   <button type="button" class="btn dropdown-link dropdown-toggle active btn-transparent pt-0 pb-0" data-bs-toggle="dropdown" aria-expanded="false">'. $_SESSION['loggedUser'] .'</button>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="../profile/userProfile.php">View Profile</a></li>
-                  <li><a class="dropdown-item" href="../adminPanel/admin.php">View Users</a></li>
+                  <ul class="dropdown-menu dropdown-menu-end bg-dark">
+                  <li><a class="dropdown-item text-light" href="../profile/userProfile.php">View Profile</a></li>
+                  <li><a class="dropdown-item text-light" href="../adminPanel/admin.php">View Users</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="../register/logout.php">Log Out</a></li>
+                  <li><a class="dropdown-item text-light" href="../register/logout.php">Log Out</a></li>
                   </ul></div>';
                 } else {
-                  echo '<div class="btn-group dropdown nav-link active">
+                  echo '<div class="btn-group dropdown nav-link active text-decoration-none">
                   <button type="button" class="btn dropdown-link dropdown-toggle active btn-transparent pt-0 pb-0" data-bs-toggle="dropdown" aria-expanded="false">'. $_SESSION['loggedUser'] .'</button>
                   <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="../profile/userProfile.php">View Profile</a></li>
+                  <li><a class="dropdown-item text-light" href="../profile/userProfile.php">View Profile</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="../register/logout.php">Log Out</a></li>
+                  <li><a class="dropdown-item text-light" href="../register/logout.php">Log Out</a></li>
                   </ul></div>';
                 }
               } else {
                 echo '
                 <li>
-                  <a href="../register/register.php" class="nav-link active contacts"><b>LOGIN</b></a>
+                  <a href="../register/register.php" class="nav-link active contacts text-light"><b>LOGIN</b></a>
                 </li>
                 <li>
-                  <a href="../register/signIn.php" class="nav-link active contacts"><b>SIGNIN</b></a>
+                  <a href="../register/signIn.php" class="nav-link active contacts text-light"><b>SIGNIN</b></a>
                 </li>
                 ';
               }
               ?>
             </ul>
           </div>
-      </div>
-</nav>
+        </div>
+      </nav>
 </body>
 </html>

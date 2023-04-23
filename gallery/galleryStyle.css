@@ -65,14 +65,13 @@ select.form-control option {
 }
 
 .filter select {
-  border-radius: 20px;
+  border-radius: px;
   background-color: transparent;
   border: 2px solid black;
   color: white;
 }
 
 select focus {
-  border-radius: 20px;
   background-color: transparent;
   border: 2px solid black;
   color: white;

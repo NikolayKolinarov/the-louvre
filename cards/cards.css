@@ -1,0 +1,30 @@
+body {
+    background-image: url('../images/theLouvreExhibits.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-image h1 {
+    color: #000;
+    font-size: 48px;
+    position: absolute;
+    color: black;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: "Kdam Thmor Pro", sans-serif;
+}
+.section-image p {
+    color: #000;
+    position: absolute;
+        color: black;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: "Kdam Thmor Pro", sans-serif;
+}
+.section-image {
+    margin-top: 450px;
+}

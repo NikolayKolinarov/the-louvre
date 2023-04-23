@@ -22,7 +22,7 @@ $_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="galleryStyle.css?<?php echo time();?>">
     <link rel="icon" type="image/x-icon" href="../images/favIcon.png">
-    <title>Gallery</title>
+    <title>Експонати</title>
   </head>
   <body class="bg-dark">
     <main>
@@ -37,11 +37,11 @@ $_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
       </section>
       
       <div id="test" class="container">
-        <div class="filter">
+        <div class="filter w-100">
         <form method="post">
-          <div class="form-group">
-            <label for="filter" class="text-white">Filter by category:</label>
-            <select class="form-control" id="filter" name="filter" onchange="this.form.submit()">
+          <div class="input-group mb-3 w-100">
+            <label for="filter" class="input-group-text">Filter by category:</label>
+            <select class="from-select" id="filter" name="filter" onchange="this.form.submit()">
               <option value="All" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'All') echo 'selected'; ?>>All</option>
               <option value="Painting" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'Painting') echo 'selected'; ?>>Painting</option>
               <option value="Sculpture" <?php if (isset($_POST['filter']) && $_POST['filter'] == 'Sculpture') echo 'selected'; ?>>Sculpture</option>
