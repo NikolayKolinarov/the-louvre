@@ -79,7 +79,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active"><b>GALLERY</b></a>
+                <a href="../gallery/gallery.php" class="nav-link active"><b>GALLERY</b></a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link active"><b>CARDS</b></a>

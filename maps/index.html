@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Louver maps</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <style>
+        html, body{
+        height: 100%;
+        width: 100%;
+    }
+    .leaflet-container {
+			height: 450px;
+			width: 600px;
+			max-width: 100%;
+			max-height: 100%;
+		}
+    #map {
+        width: 100%;
+         }
+    div.expo-container{
+        width: 117px;
+        height: 100;
+        padding-bottom: 3px;
+        text-align: center;
+        font-size: 90%;
+        color: white;
+    }
+    .expo-container b{
+        display: block;
+        margin: 3px 5px 0 5px;
+    }
+    .expo-container img{
+        width: 100%;
+        height: auto;
+    }
+    .red-expo-bgr{ background-color: #cc0033;}
+    .magenta-expo-bgr{ background-color: #993366; }
+    .blue-expo-bgr{ background-color: #6699cc; }
+    .brown-expo-bgr{ background-color: #996666;}
+    .green-expo-bgr{ background-color: #99cccc;}
+    .yellow-expo-bgr{ background-color: #ffcc66;}
+    .beige-expo-bgr{ background-color: #999999;}
+    .peach-expo-bgr{ background-color: #ffcc99;}
+    .beige-expo-bgr{ background-color: #cc9900;}
+    .cian-expo-bgr{ background-color: #009999;}
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1 class="my-5">LOUVRE MAPS</h1>
+
+            <div class="row">
+                <div class="col-12 col-md-2"><h2 class="display-6">Level 1</h2>
+                <table>
+                    <caption>Legend</caption>
+                    <tbody>
+                        <tr>
+                            <td class="red-expo-bgr">&nbsp;&nbsp;&nbsp;</td>
+                            <td class="px-2"><strong>Paintings / France</strong><br>(1350–1650)</td>
+                        </tr>
+                        <tr>
+                            <td class="magenta-expo-bgr">&nbsp;&nbsp;&nbsp;</td>
+                            <td class="px-2"><strong>Decorative Arts / Europe</strong><br>(1650–1800)</td>
+                        </tr>
+                        <tr>
+                            <td class="blue-expo-bgr">&nbsp;&nbsp;&nbsp;</td>
+                            <td class="px-2"><strong>Greek, Etruscan and Italic Antiquities</strong> <br>(1000 BC–AD 500)</td>
+                        </tr>
+                            <td class="green-expo-bgr">&nbsp;&nbsp;&nbsp;</td>
+                            <td class="px-2"><strong>Egyptian Antiquities</strong> <br>(4000–30 BC)</td>
+                         </tr>
+                </table>
+                
+                </div>
+                <div class="col-12 col-md-10">
+                    <div id="map"></div>
+
+                </div>
+            </div>
+  
+        </div>
+    </main>
+ 
+    <script>
+        const map = L.map('map', {
+                crs: L.CRS.Simple,
+                minZoom: -10
+            });
+
+            const yx = L.latLng;
+
+            function xy(x, y) {
+                if (Array.isArray(x)) { 
+                    return yx(x[1], x[0]);
+                }
+                return yx(y, x); 
+            }
+
+            const bounds = [xy(0, 0), xy(320, 200)];
+            const image = L.imageOverlay('images/louvre-museum-map-level_1.jpg', bounds).addTo(map);
+
+            const MonaLisa = xy(165, 50);
+            const LibertyLeading = xy(147, 62);
+            
+
+            const mMonaLisa = L.marker(MonaLisa).addTo(map).bindPopup('<p class="text-center fw-bold m-0">Paintings/Italy</p><div class="expo-container red-expo-bgr"><img src="images/Mona_Lisa.png"><b>Mona Lisa</b>711</div>');
+            const mLibertyLeading = L.marker(LibertyLeading).addTo(map).bindPopup('<p class="text-center fw-bold m-0">Paintings/France</p><div class="expo-container red-expo-bgr"><img src="images/Liberty_Leading.jpg"><b>Liberty Leading the People</b>700</div>');
+            
+            map.setView(xy(170, 100), 1);
+        
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

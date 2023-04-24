@@ -24,84 +24,13 @@ $_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
     <main>
       <!-- Nav Bar -->
       <?php include('../navBar/navHome.php'); ?>
-      <!-- Carousel-->
-      <div
-        id="carouselExampleIndicators"
-        class="carousel slide"
-        data-bs-ride="true"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
+      <!-- Header-->
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading text-light">Welcome!</h1>
+          <p class="lead text-light">Тук можете да разгледате някои <br>от експонатите на Лувъра</p>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="../images/header3.png"
-              class="d-block w-100 h-100"
-              alt="Header 1"
-            />
-            <div class="carousel-caption d-none d-md-block">
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="../images/header2.png"
-              class="d-block w-100 h-100"
-              alt="Header 2"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5></h5>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="../images/header1.png"
-              class="d-block w-100 h-100"
-              alt="Header 3"
-            />
-            <div class="carousel-caption d-none d-md-block">
-            </div>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <div class="b-example-divider"></div>
+      </section>
       <!-- Heroes -->
       <div class="container col-xxl-8 px-4 py-5" id="about">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">

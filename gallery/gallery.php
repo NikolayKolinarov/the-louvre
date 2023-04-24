@@ -31,8 +31,8 @@ $_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
       <!-- Gallery -->
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading text-dark">Welcome</h1>
-          <p class="lead text-dark">To The Louvre Gallery</p>
+          <h1 class="jumbotron-heading text-light">Welcome!</h1>
+          <p class="lead text-light">Тук можете да разгледате някои <br>от експонатите на Лувъра</p>
         </div>
       </section>
       

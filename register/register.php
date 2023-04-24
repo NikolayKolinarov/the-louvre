@@ -95,7 +95,7 @@ $last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/h
               <div class="card-body p-4 p-sm-5">
                 <a href="<?= $last_page ?>" class="btn btn-primary btn-login text-uppercase fw-bold btn-back"><img class="btn-img" src="../images/back_arrow.png" alt="Back Arrow"></a>
                 <h5 class="card-title text-center mb-5 fw-light fs-5">
-                  Log In
+                  Log Ingit add .
                 </h5>
 
                 <div class="form-floating mb-3">
