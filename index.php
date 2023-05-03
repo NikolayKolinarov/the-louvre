@@ -15,7 +15,6 @@ $_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="home/home.css">
     <link rel="icon" type="image/x-icon" href="images/favIcon.png">
-   
   </head>
   <body class="bg-dark text-white h-100">
       <!-- Nav Bar -->

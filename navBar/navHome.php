@@ -41,18 +41,18 @@
                   echo '<div class="btn-group dropdown nav-link active text-decoration-none">
                   <button type="button" class="navButton btn dropdown-link dropdown-toggle active btn-light btn-outline-dark pt-0 pb-0" data-bs-toggle="dropdown" aria-expanded="false">'. $_SESSION['loggedUser'] .'</button>
                   <ul class="dropdown-menu dropdown-menu-end bg-dark">
-                  <li><a class="dropdown-item text-light" href="profile/userProfile.php">View Profile</a></li>
-                  <li><a class="dropdown-item text-light" href="adminPanel/admin.php">View Users</a></li>
+                  <li><a class="dropdown-item text-light" href="profile/userProfile.php" style="background-color: rgb(33, 33, 36) !important; color: white !important;">View Profile</a></li>
+                  <li><a class="dropdown-item text-light" href="adminPanel/admin.php" style="background-color: rgb(33, 33, 36) !important; color: white !important;">View Users</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item text-light" href="register/logout.php">Log Out</a></li>
+                  <li><a class="dropdown-item text-light" href="register/logout.php" style="background-color: rgb(33, 33, 36) !important; color: white !important;">Log Out</a></li>
                   </ul></div>';
                 } else {
                   echo '<div class="btn-group dropdown nav-link active text-decoration-none">
                   <button type="button" class="btn dropdown-link dropdown-toggle active btn-transparent pt-0 pb-0" data-bs-toggle="dropdown" aria-expanded="false">'. $_SESSION['loggedUser'] .'</button>
                   <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item text-light" href="profile/userProfile.php">View Profile</a></li>
+                  <li><a class="dropdown-item text-light href="profile/userProfile.php" style="background-color: rgb(33, 33, 36) !important; color: white !important;">View Profile</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item text-light" href="register/logout.php">Log Out</a></li>
+                  <li><a class="dropdown-item text-light" href="register/logout.php" style="background-color: rgb(33, 33, 36) !important; color: white !important;">Log Out</a></li>
                   </ul></div>';
                 }
               } else {
@@ -68,11 +68,11 @@
               ?>
               <div class="btn-group dropdown nav-link active text-decoration-none">
                 <button type="button" class="navButton btn dropdown-link dropdown-toggle active btn-light btn-outline-dark pt-0 pb-0" data-bs-toggle="dropdown" aria-expanded="false">Cards</button>
-                <ul class="dropdown-menu dropdown-menu-end bg-dark">
-                  <li><a class="dropdown-item text-light" href="cards/card-1.php">Card -1</a></li>
-                  <li><a class="dropdown-item text-light" href="cards/card0.php">Card 0</a></li>
-                  <li><a class="dropdown-item text-light" href="cards/card1.php">Card 1</a></li>
-                  <li><a class="dropdown-item text-light" href="cards/card2.php">Card 2</a></li>
+                <ul class="dropdown-menu dropdown-menu-end bg-dark" style="background-color: rgb(33, 33, 36) !important; color: white !important;">
+                  <li><a class="dropdown-item text-light" href="cards/card-1.php" style="background-color: rgb(33, 33, 36) !important; color: white !important;">Card -1</a></li>
+                  <li><a class="dropdown-item text-light" href="cards/card0.php" style="background-color: rgb(33, 33, 36) !important; color: white !important;">Card 0</a></li>
+                  <li><a class="dropdown-item text-light" href="cards/card1.php" style="background-color: rgb(33, 33, 36) !important; color: white !important;">Card 1</a></li>
+                  <li><a class="dropdown-item text-light" href="cards/card2.php" style="background-color: rgb(33, 33, 36) !important; color: white !important;">Card 2</a></li>
                 </ul>
               </div>
             </ul>

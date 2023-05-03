@@ -71,6 +71,10 @@ $drawingName = $_GET["drawingName"];
       border: none;
       padding: 0;
     }
+    nav .dropdown-menu a:hover {
+      background-color: rgb(33, 37, 41) !important;
+      color: white !important;
+    }
     </style>
 </head>
 <body class="bg-dark">

@@ -88,6 +88,9 @@
       width: 100%;
       height: auto;
   }
+  nav .dropdown-menu a:hover {
+    background-color: red !important;
+  }
   .red-expo-bgr{ background-color: #cc0033;}
   .magenta-expo-bgr{ background-color: #993366; }
   .blue-expo-bgr{ background-color: #6699cc; }

@@ -118,6 +118,10 @@ body {
   border: none;
   padding: 0;
 }
+nav .dropdown-menu a:hover {
+  background-color: rgb(33, 37, 41) !important;
+  color: white !important;
+}
 
 @media only screen and (max-width: 992px) {
   nav {
