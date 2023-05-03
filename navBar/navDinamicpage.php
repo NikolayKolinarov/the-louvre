@@ -1,55 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    #google_translate_element select{
-      background-color: transparent;
-      color: white;
-      margin-top: 13px;
-    }
-  
-    .goog-logo-link{
-      display:none !important;
-    }
-    
-    .goog-te-gadget{
-      color:transparent!important;
-    }
-
-    .goog-te-banner-frame.skiptranslate {
-      display: none !important;
-    } 
-  
-    body {
-      top: 0px !important; 
-    }
-    
-    .goog-te-banner-frame{
-      display:none !important;
-    }
-  
-    #goog-gt-tt, .goog-te-balloon-frame{display: none !important;}
-    
-    .goog-text-highlight { background: none !important; box-shadow: none !important;}
-    
-    #google_translate_element span{
-      display:none !important;
-    }
-  
-    .skiptranslate iframe{
-      display: none !important;
-      visibility: hidden !important;
-    }
-    .dropdown-menu > li > a:hover,
-    .dropdown-menu > li > a:focus {
-      background-color: transparent;
-    }
-  </style>
-</head>
-<body>
 <nav
         class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top navbar-custom shadow"
         aria-label="Fifth navbar example"
@@ -66,7 +14,7 @@
           >
             <span class="navbar-toggler-icon navbar-dark bg-dark"></span>
           </button>
-          <a href="../home/home.php"><img src="../images/TheLouvreLogo.avif" alt="Logo" style="width: 70px;height: 35px;"></a>
+          <a href="../index.php"><img src="../images/TheLouvreLogo.avif" alt="Logo" style="width: 70px;height: 35px;"></a>
 
           <div
             class="collapse navbar-collapse justify-content-end"
@@ -74,7 +22,7 @@
           >
             <ul class="nav navbar-nav navbar-right ml-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a href="../home/home.php" class="nav-link active"
+                <a href="../index.php" class="nav-link active"
                   ><b>HOME</b></a
                 >
               </li>
@@ -82,12 +30,20 @@
                 <a href="../gallery/gallery.php" class="nav-link active"><b>GALLERY</b></a>
               </li>
               <li class="nav-item">
-                <a href="../cards/cards.php" class="nav-link active"><b>CARDS</b></a>
-              </li>
-              <li class="nav-item">
                 <a href="../contacts/contacts.php" class="nav-link active"><b>CONTACTS</b></a>
               </li>
-              <?php include('google.php'); ?>
+              <div id='google_translate_element'>
+                <script>
+                function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({
+                    pageLanguage: 'en,bg',
+                    includedLanguages:'en,bg', 
+                    layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+                  }, 'google_translate_element');
+                }
+                </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+              </div>
               <?php 
               if(isset($_SESSION["loggedUser"]) && isset($_SESSION["loggedUserRole"])) {
                 if ($_SESSION["loggedUserRole"] == "admin") {
@@ -111,17 +67,24 @@
               } else {
                 echo '
                 <li>
-                  <a href="../register/register.php" class="nav-link active contacts text-light"><b>LOGIN</b></a>
+                  <a href="../register/register.php" class="nav-link active contacts text-light"><b>LOG IN</b></a>
                 </li>
                 <li>
-                  <a href="../register/signIn.php" class="nav-link active contacts text-light"><b>SIGNIN</b></a>
+                  <a href="../register/signIn.php" class="nav-link active contacts text-light"><b>SIGN IN</b></a>
                 </li>
                 ';
               }
               ?>
+              <div class="btn-group dropdown nav-link active text-decoration-none">
+                <button type="button" class="navButton btn dropdown-link dropdown-toggle active btn-light btn-outline-dark pt-0 pb-0" data-bs-toggle="dropdown" aria-expanded="false">Cards</button>
+                <ul class="dropdown-menu dropdown-menu-end bg-dark">
+                  <li><a class="dropdown-item text-light" href="../cards/card-1.php">Card -1</a></li>
+                  <li><a class="dropdown-item text-light" href="../cards/card0.php">Card 0</a></li>
+                  <li><a class="dropdown-item text-light" href="../cards/card1.php">Card 1</a></li>
+                  <li><a class="dropdown-item text-light" href="../cards/card2.php">Card 2</a></li>
+                </ul>
+              </div>
             </ul>
           </div>
         </div>
       </nav>
-</body>
-</html>

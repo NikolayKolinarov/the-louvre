@@ -28,6 +28,50 @@ $drawingName = $_GET["drawingName"];
     <link rel="stylesheet" href="galleryStyle.css?<?php echo time();?>">
     <title><?php echo $drawingName; ?></title>
     <link rel="icon" type="image/x-icon" href="../images/favIcon.png">
+    <style>
+    #google_translate_element select{
+      background-color: #272727;
+      color: white;
+      margin-top: 10px;
+      margin-left: 5px;
+      margin-right: 0px;
+    }
+    .goog-logo-link,.goog-te-gadget span,div#goog-gt-{
+      display:none!important;
+    } 
+    .goog-te-gadget{
+      color:transparent!important;
+    }
+
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }  
+    body {
+      top: 0px !important; 
+    }
+    .goog-te-banner-frame{
+      display:none !important;
+    }
+  
+    #goog-gt-tt, .goog-te-balloon-frame{
+      display: none !important;
+    }
+    .goog-text-highlight {
+      background: none !important;
+      box-shadow: none !important;
+    } 
+    #google_translate_element span{
+      display:none !important;
+    }
+    .skiptranslate iframe{
+      display: none !important;
+    }
+    .goog-te-combo option {
+      color: rgb(128, 128, 128);
+      border: none;
+      padding: 0;
+    }
+    </style>
 </head>
 <body class="bg-dark">
     <main>

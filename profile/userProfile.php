@@ -26,67 +26,82 @@ $last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/h
     <title><?php echo $username; ?></title>
     <style>
     #google_translate_element select{
-      background-color: transparent;
-      color: white;
-      margin-top: 13px;
+        background-color: #272727;
+        color: white;
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-right: 0px;
     }
-  
-    .goog-logo-link{
-      display:none !important;
+    .goog-logo-link,.goog-te-gadget span,div#goog-gt-{
+        display:none!important;
     }
-    
     .goog-te-gadget{
-      color:transparent!important;
+        color:transparent!important;
     }
-
     .goog-te-banner-frame.skiptranslate {
-      display: none !important;
+        display: none !important;
     } 
-  
     body {
-      top: 0px !important; 
+        top: 0px !important; 
     }
-    
     .goog-te-banner-frame{
-      display:none !important;
+        display:none !important;
     }
-  
-    #goog-gt-tt, .goog-te-balloon-frame{display: none !important;}
-    
-    .goog-text-highlight { background: none !important; box-shadow: none !important;}
-    
+    #goog-gt-tt, .goog-te-balloon-frame{
+        display: none !important;
+    }
+    .goog-text-highlight {
+        background: none !important;
+        box-shadow: none !important;
+    }
     #google_translate_element span{
-      display:none !important;
+        display:none !important;
     }
-  
     .skiptranslate iframe{
-      display: none !important;
-      visibility: hidden !important;
+        display: none !important;
     }
-  </style>
+    .goog-te-combo option {
+        color: white;
+        border: none;
+        padding: 0;
+    }
+    </style>
 </head>
 <body>
-<?php include('../navBar/google.php'); ?>
-<section class="vh-100">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-md-12 col-xl-4">
-        <div class="card" style="border-radius: 15px;">
-          <div class="card-body text-center">
-            <a href="<?= $last_page ?>" class="btn btn-black text-uppercase fw-bold float-start">Go Back</a><br><br>
-            <div class="mt-3 mb-4">
-              <img src="userPicture.png"
+  <div id='google_translate_element'>
+    <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en,bg',
+        includedLanguages:'en,bg', 
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </div>
+  </div>
+  <section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-12 col-xl-4">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body text-center">
+            <a href="<?= $last_page ?>" class="btn btn-black text-uppercase fw-bold float-start btn-sm"><img class="btn-img" src="../images/back_arrow.png" alt="Back Arrow"></a><br><br>
+              <div class="mt-3 mb-4">
+                <img src="userPicture.png"
                 class="rounded-circle img-fluid" style="width: 100px;" />
+              </div>
+              <p class="text-muted mb-4"><?php echo '@'. $username.'' ?> <span class="mx-2"><br><br>
+              <a  class="btn btn-black text-uppercase fw-bold float-center" href="../register/logout.php">Log Out</a>
             </div>
-            <p class="text-muted mb-4"><?php echo '@'. $username.'' ?> <span class="mx-2"><br><br>
-            <a  class="btn btn-black text-uppercase fw-bold float-center" href="../register/logout.php">Log Out</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </section>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

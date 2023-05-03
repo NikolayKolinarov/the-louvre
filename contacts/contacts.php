@@ -51,29 +51,9 @@ $_SESSION['last_page'] = $_SERVER['REQUEST_URI'];
           </div>
         </div>
       </div>
-      <div id="map" style="height: 500px; width: 500px; width: 50%; margin: 0 auto;"></div>
        <!-- Footer -->
        <?php include('../footer/footerCont.php'); ?>
     </main>
-    <script>
-    function initMap() {
-      var map = L.map('map', {
-        crs: L.CRS.Simple,
-        minZoom: -5
-      });
-      var bounds = [[0,0], [1000,1000]];
-      var image = L.imageOverlay('louvre-museum-map-level-1.jpg', bounds).addTo(map);
-      var sol = L.latLng([ 145, 175.2 ]);
-      
-      L.marker(sol).addTo(map).bindPopup('Something');
-      map.setView( [70, 120], 1);
-    }
-  
-    window.onload = function() {
-      initMap();
-      };
-    </script>
-    <script src="leaflet/leaflet.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>

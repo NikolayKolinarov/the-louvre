@@ -19,66 +19,9 @@ $last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/h
 	<link rel="stylesheet" href="admin.css">
   <link rel="icon" type="image/x-icon" href="../images/favIcon.png">
 	<title>Users</title>
-	<style>
-    #google_translate_element select{
-      background-color: transparent;
-      color: white;
-      margin-top: 13px;
-    }
-  
-    .goog-logo-link{
-      display:none !important;
-    }
-    
-    .goog-te-gadget{
-      color:transparent!important;
-    }
-
-    .goog-te-banner-frame.skiptranslate {
-      display: none !important;
-    } 
-  
-    body {
-      top: 0px !important; 
-    }
-    
-    .goog-te-banner-frame{
-      display:none !important;
-    }
-  
-    #goog-gt-tt, .goog-te-balloon-frame{display: none !important;}
-    
-    .goog-text-highlight { background: none !important; box-shadow: none !important;}
-    
-    #google_translate_element span{
-      display:none !important;
-    }
-  
-    .skiptranslate iframe{
-      display: none !important;
-      visibility: hidden !important;
-    }
-
-    @media (max-width: 992px) {
-    .table-responsive {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-    .table {
-      font-size: 0.9rem;
-    }
-    .table thead th {
-      font-size: 0.8rem;
-    }
-    .table td, .table th {
-      padding: 0.5rem 0.3rem;
-    }
-  }
-  </style>
 </head>
 <body>
-<?php include('../navBar/google.php'); ?>
-<a href="<?= $last_page ?>" class="return-btn btn text-uppercase fw-bold m-3"></a>
+<a href="<?= $last_page ?>" class="return-btn btn text-uppercase fw-bold m-3 btn-sm"><img class="btn-img" src="../images/back_arrow.png" alt="Back Arrow"></a>
 <?php
 	$connection = new PDO('mysql:host=localhost;dbname=thelouvre', "root", "");
 	$delete_id = @$_GET['delete_id'];

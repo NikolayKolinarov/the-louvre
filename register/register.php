@@ -21,81 +21,17 @@ $last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : '../home/h
     />
     <link rel="icon" type="image/x-icon" href="../images/favIcon.png">
     <title>Log in</title>
-    <style>
-      form {
-        margin-top: 100px;
-      }
-
-      .btn-login {
-        font-size: 0.9rem;
-        letter-spacing: 0.05rem;
-        padding: 0.75rem 1rem;
-      }
-
-      .btn-back{
-        height: 40px;
-        width: 40px;
-      }
-
-      .btn-img {
-        display: flex;
-        height: 20px;
-        width: 20px;
-        justify-content: center;
-        align-items: center;
-      }    
-      
-      #google_translate_element select{
-        background-color: transparent;
-        color: white;
-        margin-top: 13px;
-      }
-  
-      .goog-logo-link{
-        display:none !important;
-      }
-    
-      .goog-te-gadget{
-        color:transparent!important;
-      }
-
-      .goog-te-banner-frame.skiptranslate {
-        display: none !important;
-      } 
-  
-      body {
-        top: 0px !important; 
-      }
-    
-      .goog-te-banner-frame{
-        display:none !important;
-      }
-  
-      #goog-gt-tt, .goog-te-balloon-frame{display: none !important;}
-    
-      .goog-text-highlight { background: none !important; box-shadow: none !important;}
-    
-      #google_translate_element span{
-        display:none !important;
-      }
-  
-      .skiptranslate iframe{
-        display: none !important;
-        visibility: hidden !important;
-      }
-    </style>
   </head>
   <body>
-  <?php include('../navBar/google.php'); ?>
     <form method="get" action="registerProcess.php">
       <div class="container">
         <div class="row">
           <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card border-0 shadow rounded-3 my-5">
               <div class="card-body p-4 p-sm-5">
-                <a href="<?= $last_page ?>" class="btn btn-primary btn-login text-uppercase fw-bold btn-back"><img class="btn-img" src="../images/back_arrow.png" alt="Back Arrow"></a>
+                <a href="<?= $last_page ?>" class="btn btn-primary btn-login text-uppercase fw-bold btn-back btn-sm"><img class="btn-img" src="../images/back_arrow.png" alt="Back Arrow"></a>
                 <h5 class="card-title text-center mb-5 fw-light fs-5">
-                  Log Ingit add .
+                  Log In
                 </h5>
 
                 <div class="form-floating mb-3">

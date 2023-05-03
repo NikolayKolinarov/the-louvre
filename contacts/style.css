@@ -33,6 +33,51 @@
   height: 400px;
   width: 600px;
 }
+
+#google_translate_element select{
+  background-color: #272727;
+  color: white;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 0px;
+}  
+/*google translate link | logo */
+.goog-logo-link,.goog-te-gadget span,div#goog-gt-{
+  display:none!important;
+}
+.goog-te-gadget{
+  color:transparent!important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}  
+body {
+  top: 0px !important; 
+}
+.goog-te-banner-frame{
+  display:none !important;
+}
+
+#goog-gt-tt, .goog-te-balloon-frame{
+  display: none !important;
+}
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+#google_translate_element span{
+  display:none !important;
+}
+.skiptranslate iframe{
+  display: none !important; 
+}
+.goog-te-combo option {
+  color: white;
+  border: none;
+  padding: 0;
+}
+
 @media only screen and (max-width: 992px) {
   .nav.navbar-nav.navbar-right li a {
     color: white;

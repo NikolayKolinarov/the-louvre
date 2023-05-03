@@ -41,7 +41,7 @@
                 unset($_SESSION["loggedUserRole"]);
                 $_SESSION["loggedUserRole"] = $userType;
 
-                header("Location: ../home/home.php");
+                header("Location: ../index.php");
                 die();
             }
         }

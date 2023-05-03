@@ -12096,4 +12096,10 @@ select option {
   background-color: #212124 !important;
   color: #d8cfcf !important;
 }
+
+.bgr-r-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /*# sourceMappingURL=main.css.map */

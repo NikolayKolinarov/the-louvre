@@ -3,19 +3,18 @@
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item"><a href="#" class="footer-link px-2 text-white">Home</a></li>
         <li class="nav-item"><a href="#about" class="footer-link px-2 text-white">Относно</a></li>
-        <li class="nav-item"><a href="../gallery/gallery.php" class="footer-link px-2 text-white">Gallery</a></li>
-        <li class="nav-item"><a href="../cards/cards.php" class="footer-link px-2 text-white">Cards</a></li>
-        <li class="nav-item"><a href="../contacts/contacts.php" class="footer-link px-2 text-white">Contacts</a></li>
+        <li class="nav-item"><a href="gallery/gallery.php" class="footer-link px-2 text-white">Gallery</a></li>
+        <li class="nav-item"><a href="contacts/contacts.php" class="footer-link px-2 text-white">Contacts</a></li>
         <?php 
             if(isset($_SESSION["loggedUser"]) && isset($_SESSION["loggedUserRole"])) {
                 if ($_SESSION["loggedUserRole"] == "admin") {
                   echo '
-                  <li class="nav-item"><a href="../adminPanel/admin.php" class="footer-link px-2 text-white">Admin</a></li>';
+                  <li class="nav-item"><a href="adminPanel/admin.php" class="footer-link px-2 text-white">Admin</a></li>';
                 }
               } else {
                 echo '
-                <li class="nav-item"><a href="../register/register.php" class="footer-link px-2 text-white">Log In</a></li>
-                <li class="nav-item"><a href="../register/signIn.php" class="footer-link px-2 text-white">Sign In</a></li>
+                <li class="nav-item"><a href="register/register.php" class="footer-link px-2 text-white">Log In</a></li>
+                <li class="nav-item"><a href="register/signIn.php" class="footer-link px-2 text-white">Sign In</a></li>
                 ';
               }
         ?>
